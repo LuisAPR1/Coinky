@@ -1,0 +1,21 @@
+{
+    "name": "22244/14projeto",
+    "description": "LOJA ",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "22244\\14projeto\\": "src/",
+            "core\\": "core/"
+        },
+        "files": [
+            "config.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Luis Rosa",
+            "email": "22244@aeffl.pt"
+        }
+    ],
+    "require": {}
+}

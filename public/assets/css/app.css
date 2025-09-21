@@ -1,0 +1,25 @@
+/* app.css*/
+
+
+
+.navegacao{
+    background-color:#443c88;
+    color:black;
+}
+
+.rodape{
+    background-color: #443c88;
+    color:#ff7484;
+}
+
+.nav-item{
+
+text-decoration: none;
+color: #ff7484;
+margin: 0px 10px;
+}
+
+.nav-item:hoover{
+text-decoration: underline;
+color:white;
+}
