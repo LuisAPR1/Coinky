@@ -176,7 +176,7 @@ COINKY is a web banking application developed in PHP that allows users to manage
 ## Developer
 
 **Luis Rosa**  
-Email: 22244@aeffl.pt  
+Email: luis.rosa17@hotmail.com  
 Project developed for academic purposes (PAP2022)
 
 ## License
