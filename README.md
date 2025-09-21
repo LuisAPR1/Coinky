@@ -1,188 +1,192 @@
-# COINKY - Sistema Bancário Digital
+# COINKY - Digital Banking System
 
-## 📋 Descrição
+## Description
 
-**COINKY** é uma aplicação web bancária desenvolvida em PHP que permite aos utilizadores gerir múltiplas contas financeiras (Principal, Poupanças e Reserva) com funcionalidades de transferências, visualização de saldos e histórico de movimentos.
+COINKY is a web banking application developed in PHP that allows users to manage multiple financial accounts (Main, Savings, and Reserve) with transfer functionalities, balance visualization, and transaction history.
 
-## 🚀 Funcionalidades Principais
+## Main Features
 
-### 👤 Gestão de Utilizadores
-- **Registo de novos clientes** com validação de email único
-- **Sistema de login/logout** com autenticação segura
-- **Perfil do utilizador** com possibilidade de alterar dados pessoais
-- **Alteração de password** com verificação de segurança
-- **Upload e alteração de foto de perfil**
+### User Management
+- New customer registration with unique email validation
+- Login/logout system with secure authentication
+- User profile with ability to modify personal data
+- Password change with security verification
+- Upload and change profile photo
 
-### 💰 Gestão Financeira
-- **Três tipos de conta:**
-  - 🏦 **Conta Principal** - Para transações diárias
-  - 🐷 **Poupanças** - Para objetivos de longo prazo
-  - 🛡️ **Reserva** - Para emergências
-- **Transferências entre contas** com interface intuitiva
-- **Visualização de saldos** em tempo real
-- **Histórico completo de movimentos** por conta
-- **Gráficos de evolução** dos saldos (Chart.js)
+### Financial Management
+- Three account types:
+  - Main Account - For daily transactions
+  - Savings - For long-term goals
+  - Reserve - For emergencies
+- Inter-account transfers with intuitive interface
+- Real-time balance visualization
+- Complete transaction history per account
+- Balance evolution charts (Chart.js)
 
-### 📊 Dashboard e Relatórios
-- **Dashboard principal** com visualização circular dos saldos
-- **Gráficos interativos** para análise de tendências
-- **Histórico detalhado** de todas as operações
-- **Conversor de moedas** (funcionalidade adicional)
+### Dashboard and Reports
+- Main dashboard with circular balance visualization
+- Interactive charts for trend analysis
+- Detailed history of all operations
+- Currency converter (additional functionality)
 
-### 🔧 Administração
-- **Painel administrativo** para gestão de clientes
-- **Lista de todos os clientes** registados
-- **Ativação/desativação** de contas
-- **Gestão de movimentos** do sistema
+### Administration
+- Administrative panel for customer management
+- List of all registered customers
+- Account activation/deactivation
+- System transaction management
 
-## 🛠️ Tecnologias Utilizadas
+## Technologies Used
 
 - **Backend:** PHP 7.4+
-- **Base de Dados:** MySQL
+- **Database:** MySQL
 - **Frontend:** HTML5, CSS3, JavaScript
-- **Bibliotecas:**
+- **Libraries:**
   - jQuery
-  - Chart.js (para gráficos)
-  - Circle Progress (para visualização circular)
-  - FontAwesome (ícones)
-- **Arquitetura:** MVC (Model-View-Controller)
+  - Chart.js (for charts)
+  - Circle Progress (for circular visualization)
+  - FontAwesome (icons)
+- **Architecture:** MVC (Model-View-Controller)
 - **Autoloader:** Composer
 
-## 📁 Estrutura do Projeto
+## Project Structure
 
 ```
 14-Luis_rosa_1/
-├── config.php                 # Configurações da aplicação
-├── composer.json              # Dependências do projeto
-├── core/                      # Núcleo da aplicação
-│   ├── classes/              # Classes principais
-│   │   ├── Database.php      # Gestão da base de dados
-│   │   ├── Store.php         # Funções auxiliares
-│   │   └── functions.php     # Funções utilitárias
-│   ├── controllers/          # Controladores MVC
-│   │   ├── Main.php         # Controlador principal
-│   │   ├── Admin.php        # Controlador administrativo
-│   │   └── Loja.php         # Controlador da loja
-│   ├── models/              # Modelos de dados
-│   │   ├── Clientes.php     # Modelo de clientes
-│   │   ├── AdminModel.php   # Modelo administrativo
-│   │   └── alunos.php       # Modelo de alunos
-│   ├── views/               # Vistas da aplicação
-│   │   ├── layouts/         # Layouts base
-│   │   ├── principal.php    # Dashboard principal
-│   │   ├── transfer.php     # Página de transferências
-│   │   └── ...              # Outras páginas
-│   ├── rotas.php            # Sistema de rotas
-│   └── rotas_admin.php      # Rotas administrativas
-├── public/                   # Ficheiros públicos
-│   ├── index.php            # Ponto de entrada
-│   ├── assets/              # CSS, JS, imagens
-│   └── admin/               # Painel administrativo
-└── vendor/                   # Dependências do Composer
+├── config.php                 # Application configuration
+├── composer.json              # Project dependencies
+├── core/                      # Application core
+│   ├── classes/              # Main classes
+│   │   ├── Database.php      # Database management
+│   │   ├── Store.php         # Helper functions
+│   │   └── functions.php     # Utility functions
+│   ├── controllers/          # MVC Controllers
+│   │   ├── Main.php         # Main controller
+│   │   ├── Admin.php        # Administrative controller
+│   │   └── Loja.php         # Store controller
+│   ├── models/              # Data models
+│   │   ├── Clientes.php     # Customer model
+│   │   ├── AdminModel.php   # Administrative model
+│   │   └── alunos.php       # Student model
+│   ├── views/               # Application views
+│   │   ├── layouts/         # Base layouts
+│   │   ├── principal.php    # Main dashboard
+│   │   ├── transfer.php     # Transfer page
+│   │   └── ...              # Other pages
+│   ├── rotas.php            # Routing system
+│   └── rotas_admin.php      # Administrative routes
+├── public/                   # Public files
+│   ├── index.php            # Entry point
+│   ├── assets/              # CSS, JS, images
+│   └── admin/               # Administrative panel
+└── vendor/                   # Composer dependencies
 ```
 
-## 🗄️ Base de Dados
+## Database
 
-### Tabelas Principais:
-- **`clientes`** - Informações dos utilizadores
-- **`saldo`** - Saldos das três contas por cliente
-- **`movimentos`** - Histórico de todas as transações
-- **`admins`** - Utilizadores administrativos
-- **`alunos`** - Sistema de registo de alunos
+### Main Tables:
+- **`clientes`** - User information
+- **`saldo`** - Balances of the three accounts per customer
+- **`movimentos`** - History of all transactions
+- **`admins`** - Administrative users
+- **`alunos`** - Student registration system
 
-## ⚙️ Instalação e Configuração
+## Installation and Configuration
 
-### Pré-requisitos
-- PHP 7.4 ou superior
-- MySQL 5.7 ou superior
-- Servidor web (Apache/Nginx)
+### Prerequisites
+- PHP 7.4 or higher
+- MySQL 5.7 or higher
+- Web server (Apache/Nginx)
 - Composer
 
-### Passos de Instalação
+### Installation Steps
 
-1. **Clone o repositório:**
+1. **Clone the repository:**
    ```bash
-   git clone [URL_DO_REPOSITORIO]
+   git clone [REPOSITORY_URL]
    cd 14-Luis_rosa_1
    ```
 
-2. **Instale as dependências:**
+2. **Install dependencies:**
    ```bash
    composer install
    ```
 
-3. **Configure a base de dados:**
-   - Edite o ficheiro `config.php`
-   - Atualize as credenciais da base de dados:
+3. **Configure the database:**
+   - Edit the `config.php` file
+   - Update database credentials:
    ```php
-   define('MYSQL_SERVER', 'seu_servidor');
-   define('MYSQL_DATABASE', 'sua_base_dados');
-   define('MYSQL_USER', 'seu_utilizador');
-   define('MYSQL_PASS', 'sua_password');
+   define('MYSQL_SERVER', 'your_server');
+   define('MYSQL_DATABASE', 'your_database');
+   define('MYSQL_USER', 'your_user');
+   define('MYSQL_PASS', 'your_password');
    ```
 
-4. **Configure o servidor web:**
-   - Aponte o document root para a pasta `public/`
-   - Configure as URLs amigáveis se necessário
+4. **Configure the web server:**
+   - Point document root to the `public/` folder
+   - Configure friendly URLs if necessary
 
-5. **Importe a estrutura da base de dados:**
-   - Execute os scripts SQL necessários para criar as tabelas
+5. **Import database structure:**
+   - Execute necessary SQL scripts to create tables
 
-## 🚀 Como Executar
+## How to Run
 
-1. **Inicie o servidor web**
-2. **Aceda à aplicação:**
-   - URL principal: `http://localhost/`
-   - Painel admin: `http://localhost/admin/`
+1. **Start the web server**
+2. **Access the application:**
+   - Main URL: `http://localhost/`
+   - Admin panel: `http://localhost/admin/`
 
-## 👥 Utilização
+## Usage
 
-### Para Utilizadores:
-1. **Registe-se** como novo cliente
-2. **Faça login** com as suas credenciais
-3. **Visualize os saldos** no dashboard principal
-4. **Execute transferências** entre contas
-5. **Consulte o histórico** de movimentos
+### For Users:
+1. **Register** as a new customer
+2. **Login** with your credentials
+3. **View balances** on the main dashboard
+4. **Execute transfers** between accounts
+5. **Check transaction history**
 
-### Para Administradores:
-1. **Aceda ao painel administrativo**
-2. **Visualize a lista** de todos os clientes
-3. **Gerencie contas** (ativar/desativar)
-4. **Monitore movimentos** do sistema
+### For Administrators:
+1. **Access the administrative panel**
+2. **View the list** of all customers
+3. **Manage accounts** (activate/deactivate)
+4. **Monitor system transactions**
 
-## 🔒 Segurança
+## Security
 
-- **Encriptação de passwords** com `password_hash()`
-- **Proteção contra SQL Injection** com prepared statements
-- **Validação de sessões** para acesso às páginas
-- **Verificação de permissões** para áreas administrativas
+- **Password encryption** with `password_hash()`
+- **SQL Injection protection** with prepared statements
+- **Session validation** for page access
+- **Permission verification** for administrative areas
 
-## 📱 Interface
+## Interface
 
-- **Design responsivo** para diferentes dispositivos
-- **Interface moderna** com gradientes e animações
-- **Visualização intuitiva** dos saldos com gráficos circulares
-- **Sliders interativos** para transferências
-- **Feedback visual** para todas as ações
+- **Responsive design** for different devices
+- **Modern interface** with gradients and animations
+- **Intuitive visualization** of balances with circular charts
+- **Interactive sliders** for transfers
+- **Visual feedback** for all actions
 
-## 🎯 Funcionalidades Especiais
+## Special Features
 
-- **Sistema de transferências dinâmico** com validação de saldos
-- **Gráficos em tempo real** da evolução financeira
-- **Interface de conversão de moedas**
-- **Sistema de registo de alunos** (funcionalidade adicional)
-- **Gestão de ficheiros** para upload de fotos
+- **Dynamic transfer system** with balance validation
+- **Real-time charts** of financial evolution
+- **Currency converter interface**
+- **Student registration system** (additional functionality)
+- **File management** for photo uploads
 
-## 👨‍💻 Desenvolvedor
+## Developer
 
 **Luis Rosa**  
 Email: 22244@aeffl.pt  
-Projeto desenvolvido no âmbito académico (PAP2022)
+Project developed for academic purposes (PAP2022)
 
-## 📄 Licença
+## License
 
-Este projeto foi desenvolvido para fins educacionais e académicos.
+This project was developed for educational and academic purposes.
 
 ---
 
-*COINKY - Gerindo o seu dinheiro de forma inteligente* 💰
+*COINKY - Managing your money intelligently*
+
+---
+
+**README generated by Claude 3.7 Sonnet**
