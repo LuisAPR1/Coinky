@@ -3,7 +3,7 @@
 ## Description
 
 COINKY is a web banking application developed in PHP that allows users to manage multiple financial accounts (Main, Savings, and Reserve) with transfer functionalities, balance visualization, and transaction history.
-
+**This project was developed as part of a university course assignment.**
 ## Main Features
 
 ### User Management
